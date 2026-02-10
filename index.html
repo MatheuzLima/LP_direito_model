@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acessoria Juridica Especializada</title>
+    <!-- GOOGLE FONTS -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- TAILWIND CDN SCRIPT -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            900: '#0a0e27', // Azul fundo escuro
+                            800: '#111840', // Azul seções
+                        },
+                        gold: {
+                            500: '#c5a059', // Dourado dos ícones/títulos
+                            600: '#b08d45',
+                        },
+                        whatsapp: '#25D366',
+                        whatsapp_hover: '#1ebe57',
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Inter"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* detalhes/summary FAQ animado */
+        details>summary {
+            list-style: none;
+        }
+
+        details>summary::-webkit-details-marker {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="font-sans text-gray-700 antialiased">
+
+    <nav class="fixed top-0 z-50 w-full bg-[#0a0e27]/95 backdrop-blur-sm shadow-md transition-all duration-300">
+        <div class="container mx-auto flex flex-wrap items-center justify-between px-6 py-4">
+
+            <a href="#" class="flex items-center gap-2">
+                <div class="border-2 border-[#c5a059] p-1 text-2xl font-serif font-bold text-[#c5a059] leading-none">
+                    HL
+                </div>
+                <div class="hidden flex-col md:flex">
+                    <span class="text-xs font-bold uppercase tracking-widest text-white">Nome do profissional</span>
+                    <span class="text-[10px] text-gray-400">Advocacia Especializada</span>
+                </div>
+            </a>
+
+            <button id="menu-toggle"
+                class="block rounded p-2 text-white hover:text-[#c5a059] focus:outline-none md:hidden">
+                <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+
+            <div id="menu-links" class="hidden w-full md:block md:w-auto">
+                <ul
+                    class="mt-4 flex flex-col gap-4 rounded-lg bg-[#111840] p-4 text-sm font-medium md:mt-0 md:flex-row md:items-center md:gap-8 md:bg-transparent md:p-0">
+                    <li>
+                        <a href="#" class="block text-white transition hover:text-[#c5a059]">Início</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block text-white transition hover:text-[#c5a059]">Áreas de Atuação</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block text-white transition hover:text-[#c5a059]">Sobre</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block text-white transition hover:text-[#c5a059]">Depoimentos</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block rounded bg-[#c5a059] px-5 py-2 text-center text-white transition hover:bg-[#b08d45]">
+                            Contato
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative bg-navy-900 py-28 text-white md:py-36">
+        <div
+            class="absolute inset-0 z-0 bg-[url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')] bg-cover bg-center opacity-20">
+        </div>
+
+        <div class="container relative z-10 mx-auto px-6 md:px-12">
+            <div class="flex flex-col items-center gap-10 md:flex-row md:justify-evenly">
+                <div class="flex flex-col items-center md:items-center">
+                    <div class="mb-2 text-9xl font-serif text-gold-500 tracking-tighter border-2 border-gold-500 p-5">
+                        NA
+                    </div>
+                    <p class="text-sm uppercase tracking-widest text-gold-500">Nome do Advogado</p>
+                    <p class="text-xs uppercase tracking-widest text-gray-400">Advogado</p>
+                    <p class="text-xs text-gray-500">OAB/SP 999.999</p>
+                </div>
+
+                <div class="max-w-lg text-center md:text-center">
+                    <h1 class="mb-4 text-3xl font-serif font-bold leading-tight md:text-5xl">
+                        Assessoria Jurídica <br> <span class="text-gold-500">Especializada</span>
+                    </h1>
+                    <p class="mb-8 text-gray-300 text-sm md:text-base">
+                        Contamos com uma ampla experiência, atuamos de forma ágil e segura, assessorando em todas as
+                        etapas do processo.
+                    </p>
+                    <a href="#"
+                        class="inline-flex items-center gap-2 rounded-full bg-whatsapp px-6 py-3 font-semibold text-white transition hover:bg-whatsapp_hover hover:scale-105 shadow-lg">
+                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.506-.669-.516-.173-.009-.371-.009-.569-.009-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+                        </svg>
+                        Fale conosco agora pelo WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="bg-white py-16 md:py-24">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="mb-2 text-3xl font-serif font-bold text-gray-800">Como podemos te ajudar?</h2>
+            <p class="mb-12 text-gray-500">Ajuizamento e Defesa em demandas:</p>
+
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-2 max-w-4xl mx-auto">
+
+                <div class="rounded-3xl border border-gray-100 bg-white p-8 shadow-xl hover:shadow-2xl transition">
+                    <div class="mb-6 flex justify-center">
+                        <div class="rounded-full bg-gold-100 p-4">
+                            <svg class="h-10 w-10 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="mb-4 text-xl font-bold text-gray-800">Direito Civil</h3>
+                    <ul class="space-y-2 text-left text-sm text-gray-600 pl-8">
+                        <li class="flex items-center gap-2"><span
+                                class="h-2 w-2 rounded-full bg-gold-500"></span>Família</li>
+                        <li class="flex items-center gap-2"><span
+                                class="h-2 w-2 rounded-full bg-gold-500"></span>Divórcio</li>
+                        <li class="flex items-center gap-2"><span
+                                class="h-2 w-2 rounded-full bg-gold-500"></span>Inventário</li>
+                        <li class="flex items-center gap-2"><span
+                                class="h-2 w-2 rounded-full bg-gold-500"></span>Contratos</li>
+                        <li class="flex items-center gap-2"><span
+                                class="h-2 w-2 rounded-full bg-gold-500"></span>Execuções</li>
+                        <li class="flex items-center gap-2"><span
+                                class="h-2 w-2 rounded-full bg-gold-500"></span>Consumidor</li>
+                    </ul>
+                </div>
+
+                <div class="rounded-3xl border border-gray-100 bg-white p-8 shadow-xl hover:shadow-2xl transition">
+                    <div class="mb-6 flex justify-center">
+                        <div class="rounded-full bg-gold-100 p-4">
+                            <svg class="h-10 w-10 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="mb-4 text-xl font-bold text-gray-800">Direito Empresarial e Tributário</h3>
+                    <ul class="space-y-2 text-left text-sm text-gray-600 pl-8">
+                        <li class="flex items-center gap-2"><span
+                                class="h-2 w-2 rounded-full bg-gold-500"></span>Assessoria Consultiva</li>
+                        <li class="flex items-center gap-2"><span
+                                class="h-2 w-2 rounded-full bg-gold-500"></span>Mandado de Segurança</li>
+                        <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-gold-500"></span>Ação
+                            Anulatória</li>
+                        <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-gold-500"></span>Defesa
+                            Administrativa</li>
+                        <li class="flex items-center gap-2"><span
+                                class="h-2 w-2 rounded-full bg-gold-500"></span>Recuperação de Crédito</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-navy-900 py-16 text-white md:py-24">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col items-center gap-12 md:flex-row md:items-center md:justify-center">
+                <div
+                    class="relative h-80 w-80 shrink-0 overflow-hidden rounded-2xl border-4 border-gold-500 shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                        alt="Dr. Henrique" class="h-full w-full object-cover">
+                </div>
+
+                <div class="max-w-xl text-center md:text-left">
+                    <h2 class="mb-2 text-3xl font-serif font-bold text-gold-500">Dr. Nome do Advogado</h2>
+                    <div class="mb-6 h-1 w-24 bg-gold-500 mx-auto md:mx-0"></div>
+
+                    <p class="mb-6 text-sm leading-relaxed text-gray-300">
+                        Advogado, Bacharel em Direito pela [FACULDADE] – Campus [CIDADE/ESTADO], e Pós-Graduando em
+                        Direito
+                        Tributário pela [FACULDADE]. Tem experiência de trabalho em órgãos
+                        públicos como: TJE/SP e Defensoria Pública Estadual de São Paulo, assim como, no ramo do Direito
+                        Civil, Direito Empresarial e Direito Tributário. É advogado regularmente inscrito na Ordem dos
+                        Advogados do Brasil sob o nº 999.999.
+                    </p>
+
+                    <a href="#"
+                        class="inline-flex items-center gap-2 rounded-full bg-whatsapp px-6 py-2 text-sm font-semibold text-white transition hover:bg-whatsapp_hover">
+                        <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z" />
+                        </svg>
+                        Fale conosco agora pelo WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-blue-50 py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="mb-12 text-center text-3xl font-serif font-bold text-navy-900">O que dizem nossos clientes?</h2>
+
+            <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+                <div class="rounded-xl bg-white p-6 shadow-sm">
+                    <div class="flex items-center justify-between mb-2">
+                        <div class="flex items-center gap-2">
+                            <div class="h-8 w-8 rounded-full bg-gray-300"></div> <span class="text-xs font-bold">Vanessa
+                                Oliveira</span>
+                        </div>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" class="h-4"
+                            alt="Google">
+                    </div>
+                    <div class="flex text-yellow-400 text-xs mb-2">★★★★★</div>
+                    <p class="text-xs text-gray-600">"Atendimento excelente, muito atencioso..."</p>
+                </div>
+
+                <div class="rounded-xl bg-white p-6 shadow-sm">
+                    <div class="flex items-center justify-between mb-2">
+                        <div class="flex items-center gap-2">
+                            <div class="h-8 w-8 rounded-full bg-gray-300"></div>
+                            <span class="text-xs font-bold">Lia Falcão</span>
+                        </div>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" class="h-4"
+                            alt="Google">
+                    </div>
+                    <div class="flex text-yellow-400 text-xs mb-2">★★★★★</div>
+                    <p class="text-xs text-gray-600">"Profissional com vasta experiência e competência!"</p>
+                </div>
+
+                <div class="rounded-xl bg-white p-6 shadow-sm">
+                    <div class="flex items-center justify-between mb-2">
+                        <div class="flex items-center gap-2">
+                            <div class="h-8 w-8 rounded-full bg-gray-300"></div>
+                            <span class="text-xs font-bold">Rafa M.</span>
+                        </div>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" class="h-4"
+                            alt="Google">
+                    </div>
+                    <div class="flex text-yellow-400 text-xs mb-2">★★★★★</div>
+                    <p class="text-xs text-gray-600">"Excelente profissional!!"</p>
+                </div>
+            </div>
+
+            <p class="mt-4 text-center text-xs text-blue-700 font-semibold">Avaliação avaliada Google 5.0 de 5, com base
+                em 13 avaliações</p>
+        </div>
+    </section>
+
+    <section class="bg-white py-16">
+        <div class="container mx-auto px-6 max-w-3xl">
+            <h2 class="mb-10 text-center text-3xl font-serif font-bold text-navy-900">Perguntas frequentes:</h2>
+
+            <div class="space-y-4">
+                <details class="group">
+                    <summary
+                        class="flex cursor-pointer items-center justify-between rounded bg-navy-900 px-4 py-3 text-white transition hover:bg-navy-800">
+                        <span class="flex items-center gap-2"><svg class="h-4 w-4 text-gold-500" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 5l7 7-7 7" />
+                            </svg> Como entro em contato?</span>
+                    </summary>
+                    <div class="border border-t-0 border-gray-200 bg-gray-50 p-4 text-sm text-gray-600">
+                        Envie uma mensagem pelo WhatsApp (99) 99999-9999 para falar diretamente com o Dr. Nome do
+                        Advogado.
+                    </div>
+                </details>
+
+                <details class="group">
+                    <summary
+                        class="flex cursor-pointer items-center justify-between rounded bg-navy-900 px-4 py-3 text-white transition hover:bg-navy-800">
+                        <span class="flex items-center gap-2"><svg class="h-4 w-4 text-gold-500" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 5l7 7-7 7" />
+                            </svg> Como funcionam os atendimentos?</span>
+                    </summary>
+                    <div class="border border-t-0 border-gray-200 bg-gray-50 p-4 text-sm text-gray-600">
+                        O atendimento pode ser realizado de forma presencial ou online, conforme a necessidade do
+                        cliente.
+                    </div>
+                </details>
+
+                <details class="group">
+                    <summary
+                        class="flex cursor-pointer items-center justify-between rounded bg-navy-900 px-4 py-3 text-white transition hover:bg-navy-800">
+                        <span class="flex items-center gap-2"><svg class="h-4 w-4 text-gold-500" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 5l7 7-7 7" />
+                            </svg> Quanto tempo dura os atendimentos?</span>
+                    </summary>
+                    <div class="border border-t-0 border-gray-200 bg-gray-50 p-4 text-sm text-gray-600">
+                        A duração varia conforme a complexidade do caso, mas buscamos sempre a agilidade.
+                    </div>
+                </details>
+
+                <details class="group">
+                    <summary
+                        class="flex cursor-pointer items-center justify-between rounded bg-navy-900 px-4 py-3 text-white transition hover:bg-navy-800">
+                        <span class="flex items-center gap-2"><svg class="h-4 w-4 text-gold-500" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 5l7 7-7 7" />
+                            </svg> Como funciona o pagamento dos honorários?</span>
+                    </summary>
+                    <div class="border border-t-0 border-gray-200 bg-gray-50 p-4 text-sm text-gray-600">
+                        Os honorários são combinados previamente mediante contrato, com transparência total.
+                    </div>
+                </details>
+            </div>
+
+            <div class="mt-8 text-center">
+                <a href="#"
+                    class="inline-flex items-center gap-2 rounded-full bg-whatsapp px-8 py-3 font-semibold text-white shadow-lg transition hover:bg-whatsapp_hover">
+                    Fale conosco agora pelo WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative bg-navy-900 py-16 text-white">
+        <div class="absolute inset-0 z-0 bg-gray-900 opacity-50"></div>
+        <div class="container relative z-10 mx-auto px-6">
+            <h2 class="mb-12 text-center text-3xl font-serif font-bold">Como iniciar o processo</h2>
+
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+                <div class="rounded-3xl bg-white p-8 text-center text-gray-800 shadow-xl">
+                    <div
+                        class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gold-100 text-gold-600 text-2xl">
+                        💬
+                    </div>
+                    <h3 class="mb-3 text-lg font-bold text-gold-600">Fale Conosco</h3>
+                    <p class="text-sm text-gray-600">Entre em contato conosco clicando no botão abaixo e agende uma
+                        reunião.</p>
+                </div>
+
+                <div class="rounded-3xl bg-white p-8 text-center text-gray-800 shadow-xl">
+                    <div
+                        class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gold-100 text-gold-600 text-2xl">
+                        !
+                    </div>
+                    <h3 class="mb-3 text-lg font-bold text-gold-600">Orientação</h3>
+                    <p class="text-sm text-gray-600">Faremos a análise do seu caso e vamos lhe orientar sobre como
+                        funciona o processo, dando todo suporte.</p>
+                </div>
+
+                <div class="rounded-3xl bg-white p-8 text-center text-gray-800 shadow-xl">
+                    <div
+                        class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gold-100 text-gold-600 text-2xl">
+                        ✓
+                    </div>
+                    <h3 class="mb-3 text-lg font-bold text-gold-600">Solução</h3>
+                    <p class="text-sm text-gray-600">Estamos preparados para trabalhar em seu processo, para garantir a
+                        segurança de seus direitos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-white pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col gap-10 md:flex-row md:justify-between">
+
+                <div class="md:w-1/2">
+                    <h3 class="mb-6 text-xl font-serif font-bold text-navy-900">Nossas Unidades:</h3>
+                    <div class="space-y-4 text-sm text-gray-600">
+                        <div class="flex gap-2">
+                            <span class="text-gold-500">📍</span>
+                            <p>Rua [Nome], [numero], [bairro, cidade/estado, CEP 99999-999].</p>
+                        </div>
+                        <div class="flex gap-2">
+                            <span class="text-gold-500">📍</span>
+                            <p>Rua [Nome], [numero], [bairro, cidade/estado, CEP 99999-999].</p>
+                        </div>
+                        <p class="font-bold text-navy-900 pt-2">Atendimento on-line em todo Brasil!</p>
+                    </div>
+                </div>
+
+                <div class="md:w-1/3">
+                    <h3 class="mb-6 text-xl font-serif font-bold text-navy-900">Contato</h3>
+                    <div class="space-y-4 text-sm text-gray-600">
+                        <p class="flex items-center gap-2">📞 (99) 99999-9999</p>
+                        <p class="flex items-center gap-2">✉️ email@email.com</p>
+
+                        <a href="#"
+                            class="mt-4 inline-flex w-full items-center justify-center gap-2 rounded bg-whatsapp px-6 py-3 font-bold text-white transition hover:bg-whatsapp_hover">
+                            Fale conosco agora pelo WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-16 bg-navy-900 py-4 text-center">
+            <p class="text-xs text-gray-400">Desenvolvedor: Matheus Lima - Todos os Direitos Reservados</p>
+        </div>
+    </footer>
+
+</body>
+<script>
+    // Botão navbar 
+    const menuToggle = document.getElementById('menu-toggle');
+    const menuLinks = document.getElementById('menu-links');
+
+    menuToggle.addEventListener('click', () => {
+        // Alterna a classe 'hidden' para mostrar/esconder o menu no mobile
+        menuLinks.classList.toggle('hidden');
+    });
+</script>
+
+</html>
